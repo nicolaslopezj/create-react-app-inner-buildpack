@@ -29,6 +29,7 @@ export_env_dir() {
 }
 
 cd $BUILD_DIR
+cd public
 
 # Set the web root to the build/ directory
 if [ -f "static.json" ]
