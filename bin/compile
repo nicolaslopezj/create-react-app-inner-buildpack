@@ -29,7 +29,6 @@ export_env_dir() {
 }
 
 cd $BUILD_DIR
-cd public
 
 # Set the web root to the build/ directory
 if [ -f "static.json" ]
@@ -37,7 +36,7 @@ then
   echo '       Using existing `static.json`'
 else
   echo '       Writing `static.json` to support create-react-app'
-  echo '{ "root": "public/build/" }' > ../static.json
+  echo '{ "root": "build/" }' > static.json
 fi
 
 echo '       Enabling runtime environment variables'
